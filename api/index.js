@@ -20,7 +20,7 @@ app.use(scopePerRequest(container));
 // Middleware JWT para proteger rutas (excepto las públicas como login y registro)
 app.use(koaJwt({ secret: process.env.SECRET_KEY, key: 'user' }).unless({ path: [/^\/login/, /^\/register/, /^\/test/] }));
 
-// Rutas públicas (login y registro)
+// Rutas públicas
 router.get('/test', (ctx) => {
     ctx.body = {
         status: true,
