@@ -15,7 +15,7 @@ export default function Productos({ productos }) {
     );
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req }) {
     const token = req.cookies.token;
 
     if (!token) {
@@ -44,3 +44,4 @@ export async function getServerSideProps({ req, res }) {
         };
     }
 }
+

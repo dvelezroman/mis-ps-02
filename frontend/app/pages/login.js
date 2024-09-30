@@ -21,7 +21,7 @@ export default function Login() {
             Cookies.set('token', data.token);
 
             // Redirigir a la página de productos
-            router.push('/productos');
+            await router.push('/productos');
         } catch (error) {
             console.error('Error al iniciar sesión', error);
             alert('Usuario o contraseña incorrectos');
